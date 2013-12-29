@@ -62,7 +62,9 @@ int main(int argc, const char *argv[])
         return retval;
     }
 
-    double dssim = dssim_image(&image1, &image2, outfile);
-    printf("%.4f\n",dssim);
+    double ssim;
+    double dssim = dssim_image(&image1, &image2, outfile, &ssim);
+    printf("ssim %.4f\n",ssim);
+    printf("dssim %.4f\n",dssim);
     return 0;
 }

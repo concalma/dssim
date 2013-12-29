@@ -282,7 +282,8 @@ inline static laba convert_pixel(rgba8 px, float gamma, int i, int j)
  */
 double dssim_image(png24_image *image1,
                    png24_image *image2,
-                   const char *ssimfilename)
+                   const char *ssimfilename,
+                   double *ssim)
 {
     float gamma1 = image1->gamma,
           gamma2 = image2->gamma;
@@ -378,5 +379,6 @@ double dssim_image(png24_image *image1,
     }
     free(ssimmap);
 
+    *ssim = avgminssim;
     return 1.0 / (avgminssim) - 1.0;
 }
