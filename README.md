@@ -21,8 +21,9 @@ simple and I'm not giving any guarantees about correctness (or speed :)
     dssim file.png file-modified.png
 
 Will output something like:
-`ssim 0.8345`. 1 means exactly the same image, &lt1 (-1 min) is amount of difference.
-`dssim 0.2341`. 0 means exactly the same image,&gt0 (unbounded) is amount of difference.
+`ssim 0.8345`. 1 means exactly the same image, &lt;1 (-1 min) is amount of difference.
+
+`dssim 0.2341`. 0 means exactly the same image,&gt;0 (unbounded) is amount of difference.
 
     dssim file.png file-modified.png totally-rad-visualisation.png
 
